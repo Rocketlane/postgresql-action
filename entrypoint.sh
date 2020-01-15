@@ -14,4 +14,9 @@ fi
 
 docker_run="$docker_run -d -p 5432:5432 postgres:$INPUT_POSTGRESQL_VERSION"
 
+if [ ! -z "$INPUT_POSTGRESQL_CONF" ]
+then
+  docker_run="$docker_run -c '$INPUT_POSTGRESQL_CONF'"
+fi
+
 sh -c "$docker_run"

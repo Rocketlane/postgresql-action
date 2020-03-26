@@ -27,6 +27,10 @@ inputs:
     description: 'POSTGRES_INIT_SCRIPTS - directory containing DB init scripts'
     required: false
     default: ''
+  postgresql conf:
+    description: 'POSTGRES_CONF - postgres configurations'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'

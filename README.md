@@ -11,9 +11,11 @@ See [action.yml](action.yml)
 Basic:
 ```yaml
 steps:
-- uses: harmon758/postgresql-action@v1
+- uses: danielweller-swp/postgresql-action@v1
   with:
     postgresql version: '11'  # See https://hub.docker.com/_/postgres for available versions
+    postgresql init scripts: 'init-db'
+    postgresql conf: 'max_prepared_transactions=100'
 ```
 
 # License

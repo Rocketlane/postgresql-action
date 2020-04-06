@@ -11,7 +11,7 @@ See [action.yml](action.yml)
 Basic:
 ```yaml
 steps:
-- uses: danielweller-swp/postgresql-action@v1
+- uses: danielweller-swp/postgresql-action@v2
   with:
     postgresql version: '11'  # See https://hub.docker.com/_/postgres for available versions
     postgresql init scripts: 'init-db'
